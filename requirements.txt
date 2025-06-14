@@ -1,0 +1,26 @@
+# Web server
+flask
+werkzeug
+
+# Video processing
+opencv-python
+ffmpeg-python
+
+# LLM + Vision
+openai
+
+# Transcription & alignment
+# download torches with your appropriate CUDA version (recommended)
+# torch torchaudio torchvision
+# pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+
+git+https://github.com/m-bain/whisperx.git
+
+# VAD (optional, smart audio-based frame extraction)
+silero-vad
+
+# YouTube downloader
+yt-dlp
+
+gradio
+

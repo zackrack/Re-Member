@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Student Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .result img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+        .frame-id {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .transcript, .question {
+            margin: 0.5em 0;
+        }
+        .back {
+            margin-top: 2em;
+        }
+        .back a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Student Questions</h1>
+
+    {% for item in results %}
+    <div class="result">
+        <div class="frame-id">🖼 Frame: {{ item.frame }}</div>
+        <div class="transcript"><strong>🎙 Transcript:</strong> {{ item.transcript }}</div>
+        <div class="question"><strong>🧠 AI Question:</strong> {{ item.question }}</div>
+        <img src="{{ url_for('static', filename='uploads/' + item.frame) if 'uploads' in item.frame else url_for('static', filename='../frames/' + item.frame) }}">
+    </div>
+    {% endfor %}
+
+    <div class="back">
+        <a href="/">← Back to Upload</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lab Assistant - Upload Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .upload-box {
+            padding: 2em;
+            background: #fff;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="file"] {
+            margin: 1em 0;
+        }
+        input[type="submit"] {
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your Experiment Video</h1>
+    <div class="upload-box">
+        <form method="post" enctype="multipart/form-data">
+            <p>Select a video recorded from the Ray-Ban glasses:</p>
+            <input type="file" name="video" accept="video/*" required>
+            <br>
+            <input type="submit" value="Upload and Process">
+        </form>
+    </div>
+</body>
+</html>
