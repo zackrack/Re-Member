@@ -59,8 +59,7 @@ pip install -r requirements.txt
 
 ### 4. Run the App
 python app_gradio.py  
-Visit http://localhost:7860 in your browser
-Optional args include --share, which creates a public link.
+Visit http://localhost:7860 in your browser. Optional args include --share, which creates a public link.
 
 ---
 
